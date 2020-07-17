@@ -125,6 +125,40 @@ def fill_board():
                   tic_tac_toe()
                   return winner
 
+          elif 1 in p1_sel_set and 4 in p1_sel_set and 7 in master_box_loc:
+              P2 = 7
+              master_box_loc.pop(master_box_loc.index(P2))
+              p2_sel_set.add(P2)
+              dummy_box[str(P2)] = 'X'
+              #print("\n\nP2 Move looks:")
+              print('\n')
+              tic_tac_toe()
+              print('\n')
+              flag += 1
+
+              winner = select_winners(win_dict,p1_sel_set,p2_sel_set)
+              if 'P2' in winner:
+                print('\n')
+                tic_tac_toe()
+                return winner
+
+          elif 2 in p1_sel_set and 3 in p1_sel_set and 1 in master_box_loc:
+              P2 = 1
+              master_box_loc.pop(master_box_loc.index(P2))
+              p2_sel_set.add(P2)
+              dummy_box[str(P2)] = 'X'
+              #print("\n\nP2 Move looks:")
+              print('\n')
+              tic_tac_toe()
+              print('\n')
+              flag += 1
+
+              winner = select_winners(win_dict,p1_sel_set,p2_sel_set)
+              if 'P2' in winner:
+                print('\n')
+                tic_tac_toe()
+                return winner
+
           elif 7 in p1_sel_set and 4 in p1_sel_set and 1 in master_box_loc:
               P2 = 1
               master_box_loc.pop(master_box_loc.index(P2))
